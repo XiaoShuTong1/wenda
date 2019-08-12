@@ -1,0 +1,1 @@
+这是springboot的freemark的默认目录

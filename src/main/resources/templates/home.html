@@ -1,0 +1,27 @@
+<!DOCTYPE unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<body>
+	<pre>
+				${value!'我是默认值'}
+				
+		<#if colors??>
+			<#list colors as item>
+				This is color:<font size="14" color="red">${item}</font><br/>
+			</#list>
+		</#if>
+		
+		<#if map??>
+			<#list map?keys as key>
+				<font size="14" color="red">${key}:${map[key]}</font><br/>
+			</#list>
+		</#if>
+		<#if user??>
+			<font size="14" color="red">user的name属性为：${user.name!},${user.description},${user.getDescription()}</font>			
+		</#if>
+			<#assign tile="nowcoder">
+			<font size="14" color="red">Tile:${tile}</font>
+		#parse("header.html")
+	</pre>
+	
+</body>
+</html>
